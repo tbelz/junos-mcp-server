@@ -64,6 +64,7 @@ jobs:
         with:
           version: v0.69.3
           image-ref: ${{ env.TEST_IMAGE }}
+          scanners: vuln
           format: json
           output: trivy-${{ matrix.architecture }}.json
           severity: HIGH,CRITICAL
@@ -85,6 +86,7 @@ jobs:
           version: v0.69.3
           skip-setup-trivy: true
           image-ref: ${{ env.TEST_IMAGE }}
+          scanners: vuln
           format: table
           severity: CRITICAL
           exit-code: "1"
