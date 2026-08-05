@@ -27,7 +27,7 @@ ENV LOG_LEVEL=INFO
 ENV FASTMCP_HOST=0.0.0.0
 ENV PATH="/app/.venv/bin:$PATH"
 
-RUN apk add --no-cache libffi libgcc libstdc++ libxml2 libxslt openssl \
+RUN apk add --no-cache libffi libgcc libstdc++ libxml2 libxslt openssh-client openssl \
  && addgroup -S jmcp \
  && adduser -S -G jmcp -s /bin/sh jmcp
 
